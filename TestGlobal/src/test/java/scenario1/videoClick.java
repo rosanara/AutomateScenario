@@ -21,15 +21,12 @@ public class videoClick extends TestBase {
 	public void Setup() {
 
 		initialization();
-
 	}
 
 	@Test(priority = 1)
 	public static void NavigateBrowser()  {
 
 		// //A[@class='o-Header__a-NavLink'][text()=' Shows ']
-		
-
 		WebElement showClick = driver.findElement(By.xpath("//*[@class='o-Header__a-NavLink'][1]"));
 		WebElement clickvideo = driver.findElement(By.xpath("//A[contains(text(),'Deadliest Catch')]"));
 
@@ -75,8 +72,7 @@ public class videoClick extends TestBase {
 		Hover(driver, showClick);
 		// Hover(driver, showClick);
 		Hover(driver, clickvideo1);
-		MouseHoverAndClick(driver, showClick, clickvideo1);
-		
+				
 		String secondVideoTitle =driver.findElement(By.xpath("//IMG[@class='o-ShowLead__a-Logo a-Logo']")).getAttribute("alt");
 		
 		assertion.assertEquals("Deadliest Catch", secondVideoTitle, "Did not capture the title of video");
