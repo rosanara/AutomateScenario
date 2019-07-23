@@ -1,6 +1,7 @@
 package scenario1;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -29,11 +30,28 @@ public class videoClick extends TestBase {
 		// //A[@class='o-Header__a-NavLink'][text()=' Shows ']
 		WebElement showClick = driver.findElement(By.xpath("//*[@class='o-Header__a-NavLink'][1]"));
 		WebElement clickvideo = driver.findElement(By.xpath("//A[contains(text(),'Deadliest Catch')]"));
-
-		Hover(driver, showClick);
-		Hover(driver, clickvideo);
 		
-		//MouseHoverAndClick(driver, showClick, clickvideo);
+		try {
+		
+			Hover(driver, showClick);
+			Hover(driver, clickvideo);
+			
+		}
+		
+		catch(StaleElementReferenceException e)
+		{
+			
+			 showClick = driver.findElement(By.xpath("//*[@class='o-Header__a-NavLink'][1]"));
+			 clickvideo = driver.findElement(By.xpath("//A[contains(text(),'Deadliest Catch')]"));
+			
+			Hover(driver, showClick);
+			Hover(driver, clickvideo);
+			
+		}
+
+		
+		
+       //MouseHoverAndClick(driver, showClick, clickvideo);
 
 		String str = driver.findElement(By.xpath("//IMG[@class='o-ShowLead__a-Logo a-Logo']")).getAttribute("alt");
 		 String txt1= driver.findElement(By.xpath("//IMG[@class='o-ShowLead__a-Logo a-Logo']")).getText();
