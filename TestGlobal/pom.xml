@@ -40,8 +40,7 @@
     <artifactId>cucumber-core</artifactId>
     <version>1.2.3</version>
 </dependency>
-		
-
+	
 		
 		<dependency>
 			<groupId>info.cukes</groupId>
@@ -57,13 +56,6 @@
 			<artifactId>cucumber-reporting</artifactId>
 			<version>1.0.0</version>
 		</dependency>
-
-		<dependency>
-			<groupId>info.cukes</groupId>
-			<artifactId>gherkin</artifactId>
-			<version>2.12.2</version>
-		</dependency>
-
 		
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
@@ -79,12 +71,7 @@
 			<scope>test</scope>
 		</dependency>
 		
-		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
-<dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-testng</artifactId>
-    <version>2.0.0</version>
-</dependency>
+		
 
 <!-- https://mvnrepository.com/artifact/junit/junit -->
 <dependency>
@@ -102,6 +89,23 @@
     <version>6.14.3</version>
     <scope>test</scope>
 </dependency>
+
+<!-- https://mvnrepository.com/artifact/info.cukes/gherkin -->
+<dependency>
+    <groupId>info.cukes</groupId>
+    <artifactId>gherkin</artifactId>
+    <version>2.11.4</version>
+    <scope>provided</scope>
+</dependency>
+
+
+<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-testng -->
+<dependency>
+    <groupId>info.cukes</groupId>
+    <artifactId>cucumber-testng</artifactId>
+    <version>1.2.3</version>
+</dependency>
+
 
 
 	</dependencies>
